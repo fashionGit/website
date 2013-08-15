@@ -4,7 +4,7 @@ $(document).ready(function() {
 	
 	$("#content").css("display", "none");
 
-    $("#content").fadeIn();
+    $("#content").fadeIn(3000);
     
 	$(".smoothLink").click(function(event){
 		event.preventDefault();

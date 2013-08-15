@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/index.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ITM Salzburg Home</title>
+<title>Desiginfication</title>
 </head>
 <body>
 	<div id="navbar"></div>
@@ -36,13 +36,13 @@
 						<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 						<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 						<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-						<br> <br> <br> <br> <br><div id="trowsers">trowsers</div> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+						<br> <br> <br> <br> <br><div id="trowsers"><h1>trowsers</h1></div> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 						<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 						<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 						<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 						<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 						<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-						<br> <br> <br> <br> <br> <br> <br> <br> <br> <br><div id="shoes">shoes</div>kfjösldkjföslkdjfölsakjfölskjflskjafölsjjföldjfösldkfj
+						<br> <br> <br> <br> <br> <br> <br> <br> <br> <br><div id="shoes"><h1>shoes</h1></div>kfjösldkjföslkdjfölsakjfölskjflskjafölsjjföldjfösldkfj
 					</div>
 				</div>
 			</div>

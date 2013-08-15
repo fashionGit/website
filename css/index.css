@@ -1,1 +1,11 @@
 @CHARSET "ISO-8859-1";
+
+.bubbleContent{
+	width: 0px;
+	height: 0px;
+	display: none;
+	background-image: url("../img/circle.png");
+	background-size: contain;
+	text-align: center;
+	color:white;
+}
