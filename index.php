@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 5 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,8 +12,8 @@
 <body>
 	<div id="mainImg"></div>
 
-	<div id="navbar"></div>
-	<div id="content">
+	<?php include "navbar.php";?>
+		<div id="content">
 
 		<div class="container">
 			<div class="row-fluid">
@@ -81,7 +82,7 @@
 	<br>
 	<br>
 	<br>
-	<div id="footer"></div>
+	<?php include "footer.html";?>
 </body>
 <script src="lib/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="lib/js/bootstrap.min.js" type="text/javascript"></script>

@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 5 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,12 +10,10 @@
 <title>Desiginfication</title>
 </head>
 <body>
-	<div id="navbar"></div>
+	<?php include "navbar.php";?>
 
 	<div id="content">
 		<div class="container">
-
-			<br> <br> <br> <br>
 
 			<div class="row">
 				<div class="span3">
@@ -53,7 +52,7 @@
 	<br>
 	<br>
 	<br>
-	<div id="footer"></div>
+	<?php include "footer.html";?>
 </body>
 <script src="lib/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="lib/js/bootstrap.min.js" type="text/javascript"></script>

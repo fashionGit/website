@@ -1,4 +1,4 @@
-$('body').waypoint(function() {
+$(document).ready(function() {
 	$( "#circle1" ).show().animate({
 	    width: "500px",
 	    height: "500px",
