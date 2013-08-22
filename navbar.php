@@ -4,22 +4,25 @@
             <div class="navbar-inner">
                 <div class="container">
                 
-                <?php if(isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == true){?>
-		                	<a style="float:right" class="btn btn-inverse" href="logout.php" >Logout</a>
-		                	<a style="float:right" class="btn btn-info smoothLink" href="home.php" ><?php echo $_SESSION['username']?></a>
+                <?php 
+                
+                		if(isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == true){?>
+		                	<a style="float:right;" class="btn btn-inverse" href="logout.php" >Logout</a>
+		                	<a style="float:right; margin-right: 20px;" class="btn btn-info smoothLink" href="home.php" ><?php echo $_SESSION['username'];?></a>
 				<?php 	} else {?>
-							<a style="float:right" class="btn btn-inverse" role="button" href="#myModal"  data-toggle="modal">Login</a>
+							<a style="float:right;" class="btn btn-inverse" role="button" href="#myModal"  data-toggle="modal">Login</a>
+							<a style="float:right; margin-right: 20px;" class="btn btn-success smoothLink" href="register.php" >Register</a>
                 <?php 	} ?>
                 
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse"> 
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span> 
                         <span class="icon-bar"></span>
-                    </a> <a class="brand" href="index.php">Designification</a>
+                    </a> <a class="brand smoothLink" href="index.php?l=0">Designification</a>
 
                     <div class="nav-collapse navbar-responsive-collapse in collapse" style="height: auto;">
                         <ul class="nav" >
-                            <li class="active"><a href="index.php">Home</a></li>
+                            <li class="active"><a class="smoothLink" href="index.php?l=0">Home</a></li>
                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-header">Gender</li>
@@ -59,7 +62,7 @@
 </form>
   </div>
 </div>
-
+<script src="lib/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script>
 	var title = window.location.href;
 	$(".navElement").each(function() {

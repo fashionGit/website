@@ -9,13 +9,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Designification</title>
 </head>
-<body>
-	<div id="mainImg"></div>
+<body style="overflow-y:scroll;">
+	
+	<?php 
+		if(isset($_GET["l"])&&$_GET["l"]==0){}else{echo '<div id="logo"></div>';}
+	?>
+	
+	<div id="mainImg" style="display:none;"></div>
 
+	<div id="anchor" style="display:none;">anchor</div>
+	
 	<?php include "navbar.php";?>
 		<div id="content">
 
-		<div class="container">
+		<div class="container visible-desktop">
 			<div class="row-fluid">
 				<div class="hero-unit span12"
 					style="background-color: rgba(255, 255, 255, 0.8);">
@@ -27,7 +34,7 @@
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container visible-desktop">
 
 			<div class="row-fluid" id="row2">
 				<div class="span8">

@@ -2,6 +2,9 @@
 session_start();
 
 include 'services/establishDbConnection.php';
+include 'objects/user.php';
+
+
 
 $result = mysql_query("SELECT * FROM user");
 
@@ -24,17 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		if ($email == $readuser[$f]["EMAIL"] && $password == $readuser[$f]["PASSWORD"])
 		{
 
-			if ($readuser[$f]["ROLE"])
-			{
-				$_SESSION['role']=1;
-			}
-			else
-			{
-				$_SESSION['role']=0;
-			}
-
-			$_SESSION['email']=$readuser[$f]["EMAIL"];
+			$authenticatedUser = new User($readuser[$f]["ID"], $readuser[$f]["USERNAME"], $readuser[$f]["EMAIL"], $readuser[$f]["PASSWORD"], $readuser[$f]["ROLE"]);
 			$_SESSION['username']=$readuser[$f]["USERNAME"];
+			$_SESSION['user']=serialize($authenticatedUser);
 
 			$_SESSION['authenticated'] = true;
 
@@ -58,6 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 //The Index-site which is responsible for further guiding through the application
 mysql_free_result($result);
+include 'services/authentication.php';
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 5 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -67,19 +64,24 @@ mysql_free_result($result);
 <link rel="stylesheet" type="text/css" href="css/index.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Desiginfication</title>
+<title>Designification</title>
+<script type="text/javascript">
+var subjects = new Array();
+</script>
 </head>
 <body>
 	<?php include "navbar.php";?>
 
 	<div id="content">
-	
-		<div class="container well">
-		<?php if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == true) {
-			
 
-		
-		}?></div>
+		<div class="container">
+			<div class="row-fluid">
+				<?php if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == true) {
+					include "parts/account.php";
+				}?>
+			</div>
+		</div>
+
 	</div>
 	<br>
 	<br>
@@ -89,4 +91,53 @@ mysql_free_result($result);
 <script src="lib/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="lib/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/global.js" type="text/javascript"></script>
+<script src="lib/js/jquery.form.min.js" type="text/javascript"></script>
+<script>
+var aboutToDelete;
+
+$('#search').typeahead({source: subjects});
+function show(element){
+$(element).show(100);
+}
+
+$("#editForm").ajaxForm({ 
+	target: '#editResult',
+	beforeSubmit: function(formData, jqForm, options) { 
+
+		$("#loading").show();
+		
+	    aboutToDelete = formData[0]["value"]; 
+	    
+	    return true; },
+	success: function showResponse(responseText, statusText, xhr, $form)  { 
+		$("#loading").hide();
+		if(responseText.indexOf("success")!=-1)
+		{
+			$("#row"+aboutToDelete).slideUp();
+		}
+	} 
+}); 
+
+$("#searchUser").ajaxForm({ 
+	target: '#result',
+	beforeSubmit: function(){
+			$("#loading").show();
+		},
+	success: function(){
+		$("#loading").hide();
+		}
+}); 
+</script>
+<script type="text/javascript">
+//Javascript to enable link to tab
+var url = document.location.toString();
+if (url.match('#')) {
+    $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
+} 
+
+// Change hash for page-reload
+$('.nav-tabs a').on('shown', function (e) {
+    window.location.hash = e.target.hash;
+});
+</script>
 </html>

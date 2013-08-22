@@ -5,5 +5,5 @@
      $hostname = $_SERVER['HTTP_HOST'];
      $path = dirname($_SERVER['PHP_SELF']);
 
-     header('Location: http://'.$hostname.($path == '/' ? '' : $path).'/Index.php');
+     header('Location: http://'.$hostname.($path == '/' ? '' : $path).'/index.php?l=0');
 ?>
