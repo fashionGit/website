@@ -28,7 +28,7 @@ if(isset($_POST['submit']))
               <tbody>
               <?php for ($f=0; $f <$i; $f++)
 				{
-					echo "<tr id='row".$readuser[$f]["ID"]."'>";
+					echo "<tr id='rowUser".$readuser[$f]["ID"]."'>";
 					echo "<td>".$readuser[$f]["ID"]."</td>";
 					echo "<td>".$readuser[$f]["USERNAME"]."</td>";
 					echo "<td>".$readuser[$f]["EMAIL"]."</td>";
@@ -37,7 +37,7 @@ if(isset($_POST['submit']))
 					{
 					?>
 					<td>
-						<button type="submit" name="delete" class="close" value="<?php echo $readuser[$f]["ID"]?>">&times;</button>
+						<button type="submit" name="deleteUser" class="close" value="<?php echo $readuser[$f]["ID"]?>">&times;</button>
 					</td>
 					<?php }else{
 						echo "<td></td>";

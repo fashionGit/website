@@ -4,15 +4,12 @@ session_start();
 include 'services/establishDbConnection.php';
 include 'objects/user.php';
 
-
-
 $result = mysql_query("SELECT * FROM user");
 
 for ($i=0; $i < mysql_num_rows ($result); $i++)
 {
 	$readuser[$i] = mysql_fetch_assoc($result);
 }
-
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -95,36 +92,65 @@ var subjects = new Array();
 <script>
 var aboutToDelete;
 
-$('#search').typeahead({source: subjects});
+$('#searchU').typeahead({source: subjects});
+
 function show(element){
 $(element).show(100);
 }
 
-$("#editForm").ajaxForm({ 
-	target: '#editResult',
+$("#editFormUser").ajaxForm({ 
+	target: '#editResultUser',
 	beforeSubmit: function(formData, jqForm, options) { 
 
-		$("#loading").show();
+		$("#loadingUser").show();
 		
 	    aboutToDelete = formData[0]["value"]; 
 	    
 	    return true; },
 	success: function showResponse(responseText, statusText, xhr, $form)  { 
-		$("#loading").hide();
+		$("#loadingUser").hide();
 		if(responseText.indexOf("success")!=-1)
 		{
-			$("#row"+aboutToDelete).slideUp();
+			$("#rowUser"+aboutToDelete).slideUp();
+		}
+	} 
+}); 
+
+$("#editFormProduct").ajaxForm({ 
+	target: '#editResultProduct',
+	beforeSubmit: function(formData, jqForm, options) { 
+
+		$("#loadingProduct").show();
+		
+	    aboutToDelete = formData[0]["value"]; 
+	    
+	    return true; },
+	success: function showResponse(responseText, statusText, xhr, $form)  { 
+		$("#loadingProduct").hide();
+		if(responseText.indexOf("success")!=-1)
+		{
+			$("#rowProduct"+aboutToDelete).slideUp();
 		}
 	} 
 }); 
 
 $("#searchUser").ajaxForm({ 
-	target: '#result',
+	target: '#resultUser',
 	beforeSubmit: function(){
-			$("#loading").show();
+			$("#loadingUser").show();
 		},
 	success: function(){
-		$("#loading").hide();
+		$("#loadingUser").hide();
+		}
+}); 
+
+$("#searchProducts").ajaxForm({ 
+	target: '#resultProduct',
+	beforeSubmit: function(){
+			$("#loadingProduct").show();
+		},
+	success: function(){
+		$("#loadingProduct").hide();
 		}
 }); 
 </script>

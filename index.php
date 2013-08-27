@@ -93,7 +93,6 @@
 </body>
 <script src="lib/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="lib/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="lib/js/waypoints.min.js" type="text/javascript"></script>
 <script src="js/global.js" type="text/javascript"></script>
 <script src="js/index.js" type="text/javascript"></script>
 <script type="text/javascript">

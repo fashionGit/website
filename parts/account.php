@@ -13,6 +13,9 @@
 <div class="row-fluid">
 	<div class="well">
 		<div class="tabbable">
+		
+<!-- 		TABS -->
+		
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#general" data-toggle="tab"><i
 						class="icon-globe"></i> General</a>
@@ -25,9 +28,15 @@
 				<?php if($cUser->getRole()=="admin"){?>
 				<li><a href="#management" data-toggle="tab"><i
 						class="icon-briefcase"></i> Management</a></li>
+				<li><a href="#products" data-toggle="tab"><i
+						class="icon-gift"></i> Products</a></li>
 				<?php }?>
 
 			</ul>
+			
+<!-- 			/TABS -->
+<!-- 			TABS CONTENT -->
+			
 			<div class="tab-content">
 				<div class="tab-pane active" id="general">
 					<h3>General account information</h3>
@@ -69,7 +78,7 @@
 					<form id="searchUser" action="services/searchUser.php"
 						method="post">
 						<div class="input-append span4">
-							<input autocomplete="off" type="text" id="search" name="searchs"
+							<input autocomplete="off" type="text" id="searchU" name="searchs"
 								data-provide="typeahead" data-items="4" />
 							<button class="btn" type="submit" name="submit">
 								<i class="icon-search"></i>
@@ -88,16 +97,47 @@
 					<?php } ?>
 					</script>
 					<br>
-					<div style="height: 20px;"><img id="loading" style="display: none;" src="img/loader.gif"></div>
+					<div style="height: 20px;"><img id="loadingUser" style="display: none;" src="img/loader.gif"></div>
 					<br>
 					
-					<form id="editForm" action="services/edit.php" name="editForm" method="post">
-							<div id="result"></div>
+					<form id="editFormUser" action="services/edit.php" name="editForm" method="post">
+							<div id="resultUser"></div>
 					</form>
-					<div id="editResult"></div>
+					<div id="editResultUser"></div>
+				</div>
+				<div class="tab-pane" id="products">
+					<h3>Product management</h3>
+					
+					<form id="searchProducts" action="services/searchProduct.php"
+						method="post">
+						<div class="input-append span4">
+							<input autocomplete="off" type="text" id="searchP" name="searchs"
+								data-provide="typeahead" data-items="4" />
+							<button class="btn" type="submit" name="submit">
+								<i class="icon-search"></i>
+							</button>
+						</div>
+					</form><br>
+					<small>Based on name</small>
+					<script type="text/javascript">
+					<?php 
+					$foundProducts="";
+					?>
+					</script>
+					<br>
+					<div style="height: 20px;"><img id="loadingProduct" style="display: none;" src="img/loader.gif"></div>
+					<br>
+					
+					<form id="editFormProduct" action="services/edit.php" name="editForm" method="post">
+							<div id="resultProduct"></div>
+					</form>
+					<div id="editResultProduct"></div>
+					
 				</div>
 				<?php }?>
 
+<!-- 				/TABS CONTENT -->
+				
 			</div>
 		</div>
 	</div>
