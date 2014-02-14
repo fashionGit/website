@@ -11,7 +11,7 @@
 <title>Desiginfication</title>
 </head>
 <body>
-	<?php include "navbar.php";?>
+	<?php include "parts/navbar.php";?>
 
 	<div id="content">
 		<div class="container">
@@ -33,7 +33,7 @@
 
 		</div>
 	</div>
-	<?php include "footer.html";?>
+	<?php include "parts/footer.html";?>
 
 </body>
 <script src="lib/js/jquery-1.7.2.min.js" type="text/javascript"></script>
