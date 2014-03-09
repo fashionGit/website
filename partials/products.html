@@ -1,0 +1,63 @@
+<div class="page-header">
+  <h1>Interessted in our shirts? <small>Feel free to search</small></h1>
+</div>
+
+<div class="container" ng-controller="CarouselDemoCtrl">
+	<div
+		style="height: 500px; background: url('img/shirt.jpg') no-repeat center; background-size: contain;">
+		<carousel interval="5000"> <slide
+			ng-repeat="slide in slides" active="slide.active"> <img
+			ng-src="{{slide.image}}" style="margin: auto;">
+		<div class="carousel-caption">
+			<!--           <h4>Slide {{$index}}</h4> -->
+			<p>{{slide.text}}</p>
+		</div>
+		</slide> </carousel>
+	</div>
+</div>
+
+<div class="row" style="background-color: white;">
+	<div class="col-md-2 col-md-offset-2 textbox">
+		<span class="glyphicon glyphicon-search"></span>
+		<p style="margin-top: 10px;">Lorem ipsum dolor sit amet,
+			consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+			ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+			eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+			gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+			nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+			erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+			et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+			Lorem ipsum dolor sit amet.</p>
+	</div>
+	<div class="col-md-2 col-md-offset-1 textbox">
+		<span class="glyphicon glyphicon-star"></span>
+
+		<p style="margin-top: 10px;">Lorem ipsum dolor sit amet,
+			consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+			ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+			eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+			gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+			nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+			erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+			et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+			Lorem ipsum dolor sit amet.</p>
+
+	</div>
+	<div class="col-md-2 col-md-offset-1 textbox">
+		<span class="glyphicon glyphicon-cloud"></span>
+		<p style="margin-top: 10px;">Lorem ipsum dolor sit amet,
+			consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+			ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+			eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+			gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+			nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+			erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+			et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+			Lorem ipsum dolor sit amet.</p>
+
+	</div>
+
+</div>

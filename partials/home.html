@@ -1,0 +1,115 @@
+<ul id="nav" class="visible-md visible-lg">
+		<li><a class="click" href="#firsttext" title="Next Section" ><span class="glyphicon glyphicon-minus"></span></a></li>
+	    <li><a class="click" href="#secondtext" title="Next Section"><span class="glyphicon glyphicon-minus"></span></a></li>
+		<li><a class="click" href="#thirdtext" title="Next Section"><span class="glyphicon glyphicon-minus"></span></a></li>
+	</ul>
+<div class="row visible-md visible-lg" style="height: 600px;">
+	<div id="intro">
+	<div class="container">
+	<div style="margin-top:500px;" class="center-block"><h1>Hello, welcome to new young fashion company</h1><a href="#firsttext" class="btn btn-default click"><span class="glyphicon glyphicon-chevron-down"></span> Explore</a></div>
+	</div>
+	</div>
+
+</div>
+
+<div class="row horizontalTextbox" >
+	<div class="col-md-1 col-md-offset-2">
+		<img src="img/shirt.jpg" alt="..." class="img-thumbnail" width="200px"
+			height="200px">
+	</div>
+	<div class="col-md-7">
+		<blockquote>
+		<h2>h2. Bootstrap heading</h2>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+				diam nonumy eirmod tempor invidunt ut labore et dolore magna
+				aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+				duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+				sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+				consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+				ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+				eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+				gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<footer>
+				Someone famous in <cite title="Source Title">Source Title</cite>
+			</footer>
+		</blockquote>
+	</div>
+</div>
+<div class="row visible-md visible-lg" style="height: 600px;" id="firsttext">
+	<div id="second"></div>
+
+</div>
+
+<div class="row horizontalTextbox" >
+	<div class="col-md-7 col-md-offset-2">
+		<blockquote class="blockquote-reverse">
+		<h2>h2. Bootstrap heading</h2>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+				diam nonumy eirmod tempor invidunt ut labore et dolore magna
+				aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+				duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+				sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+				consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+				ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+				eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+				gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<footer>
+				Someone famous in <cite title="Source Title">Source Title</cite>
+			</footer>
+		</blockquote>
+	</div>
+	<div class="col-md-1">
+		<img src="img/shirt.jpg" alt="..." class="img-thumbnail" width="200px"
+			height="200px">
+	</div>
+</div>
+
+<div class="row visible-md visible-lg" style="height: 600px;" id="secondtext">
+	<div id="third"></div>
+
+</div>
+
+<div class="row horizontalTextbox">
+	<div class="col-md-7 col-md-offset-2">
+		<blockquote class="blockquote-reverse">
+		<h2>h2. Bootstrap heading</h2>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+				diam nonumy eirmod tempor invidunt ut labore et dolore magna
+				aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+				duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+				sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+				consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+				ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+				eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+				gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			<footer>
+				Someone famous in <cite title="Source Title">Source Title</cite>
+			</footer>
+		</blockquote>
+	</div>
+	<div class="col-md-1">
+		<img src="img/shirt.jpg" alt="..." class="img-thumbnail" width="200px"
+			height="200px">
+	</div>
+</div>
+<div id=thirdtext></div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		 $(".click").click(function (event){
+             event.preventDefault();
+             
+             var to= $(this).attr('href');
+                 $('html, body').animate({
+                     scrollTop: $(to).offset().top-$(window).height() //50 for menu offset
+                 }, 2000);
+             //});
+         });
+		 
+		 
+		$('#intro').parallax("0%", 0.1);
+		$('#second').parallax("0%", 0.1);
+		$('#third').parallax("0%", 0.1);
+
+	});
+</script>

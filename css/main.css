@@ -1,0 +1,71 @@
+@CHARSET "ISO-8859-1";
+
+#mainNav{
+	border: none;
+	border-radius: 0px;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+body{
+	background-color: white;
+}
+
+.textbox{
+	background-color:rgba(220, 220, 220, 0.5); 
+	text-align: center; 
+	padding-top: 20px;
+}
+
+.horizontalTextbox{
+	height:auto; 
+	background-color:rgba(200, 200, 200, 0.7); 
+	padding-top: 10px;
+	color:black;
+	overflow: auto;
+}
+
+#intro{
+	background: white url('../img/sword2.png') no-repeat fixed;
+	background-size: 100% auto;
+	color: black;
+	height: 600px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#second{
+	background: white url('../img/background.jpg') no-repeat fixed;
+	background-size: 100% auto;
+	color: white;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#third{
+	background: white url('../img/shirt.jpg') no-repeat fixed;
+	background-size: 100% auto;
+	color: white;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.carousel-control{
+	width: 50%;
+}
+
+#nav{
+	list-style: none;
+	position: fixed;
+	right: 20px;
+}
+
+.click{
+	color: grey;
+}
+
+.click:HOVER{
+	color:black;
+}
