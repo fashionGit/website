@@ -15,11 +15,9 @@ var fashionApp = angular.module('fashionApp', ['ngRoute','ui.bootstrap'])
     .when('/contact', {
       templateUrl: pathToPartials + 'contact.html'
     })
-    .when('/register', {
-      templateUrl: pathToPartials + 'register.html'
-    })
-    .when('/login', {
-      templateUrl: pathToPartials + 'login.html'
+    .when('/evolution', {
+      templateUrl: pathToPartials + 'evolution.html',
+      controller: EvolutionCtrl
     })
     .otherwise({
     	templateUrl: pathToPartials + 'error.html'

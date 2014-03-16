@@ -1,3 +1,4 @@
+
 function HeaderController($scope, $location) 
 { 
     $scope.isActive = function (viewLocation) { 
@@ -22,3 +23,6 @@ function CarouselDemoCtrl($scope) {
 		      text: 'foo3'
 		    });
 	}
+function EvolutionCtrl($scope, $routeParams) {
+		init();
+}
