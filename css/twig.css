@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+.panel-body {
+	background-color: transparent;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.panel-heading {
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.panel-group {
+	border-radius: 0px;
+}
+
+.panel-group .panel{
+	border-radius: 0px;
+}
+
+.panel-title{
+	text-align: center;
+}
+
+.panel {
+	background-color: transparent;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-radius: 0px;
+}
+
+.userimg {
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+}
+
+.usertext {
+	background: rgba(220, 220, 220, 0.95);
+}
+
+.productsTextbox {
+	height: auto;
+	overflow: hidden;
+	/* 	font-family: Segoe UI Light; */
+}
+
+#nameProducts {
+	font-size: 130pt;
+	font-weight: lighter;
+	text-align: center;
+}
+
+#twigs {
+	background-image: url('../img/fortpflanzung.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	min-height: 900px;
+}

@@ -1,7 +1,81 @@
-@CHARSET "ISO-8859-1";
+@CHARSET "UTF-8";
 
-#image1{
-	max-width: 100%;
-    height: auto;
-    width: auto\9;
+#footer {
+	height: 170px;
+	background-color: #101010;
+}
+
+#bottomInformation {
+	padding-top: 30px;
+}
+
+.textbox {
+	background-color: rgba(220, 220, 220, 0.5);
+	text-align: center;
+	padding-top: 20px;
+}
+
+.horizontalTextbox {
+	height: auto;
+	background-color: rgba(200, 200, 200, 0.8);
+	padding-top: 10px;
+	overflow: auto;
+}
+
+#intro {
+	background: grey url('../img/first.jpg') no-repeat fixed;
+	background-position: center;
+	background-size: cover;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	color: black;
+}
+
+#second {
+	background: grey url('../img/second.jpg') no-repeat fixed;
+	background-position: center;
+	background-size: cover;
+	color: black;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#third {
+	background: grey url('../img/third.jpg') no-repeat fixed;
+	background-position: center;
+	background-size: cover;
+	color: black;
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.mainTextbox {
+	height: auto;
+	background-color: rgba(238, 238, 238, 0.8);
+	padding-top: 10px;
+	overflow: auto;
+	/* 	font-family: Segoe UI Light; */
+}
+
+#smallBody {
+	background: white url('../img/first.jpg') no-repeat fixed;
+	background-position: center;
+	background-size: cover;
+	color: black;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+blockquote {
+	border-left-color: #d9534f;
+}
+
+.blockquote-reverse {
+	border-right-color: #d9534f;
 }

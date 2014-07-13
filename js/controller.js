@@ -23,6 +23,17 @@ function CarouselDemoCtrl($scope) {
 		      text: 'foo3'
 		    });
 	}
+
+function AccordionDemoCtrl($scope) {
+	  $scope.openVar = true;
+	  
+	  $scope.acc1IsOpen=true;
+	  $scope.acc2IsOpen=false;
+	  $scope.acc3IsOpen=false;
+	  $scope.acc4IsOpen=false;
+
+	  
+	}
 function EvolutionCtrl($scope, $routeParams) {
-		init();
+//		init();
 }
